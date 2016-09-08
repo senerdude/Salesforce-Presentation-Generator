@@ -1,0 +1,137 @@
+/* General Rules */
+body { margin:0; padding:0; }
+a { text-decoration:none; cursor:pointer; }
+h1, h2, h3, h4, h5 { font-weight:normal;font-style:normal; margin:0; padding:0; }
+
+/* Base Slide Styles */
+.slideContainer { position:relative; width:1024px; height:768px; background:#fff; margin:0 auto; overflow:hidden; }
+	
+	// Content
+	.content { position:relative; -webkit-transform:scale(1,1); transform:scale(1,1); -webkit-transition:all ease 0.3s; transition:all ease 0.3s; -webkit-transform-origin:center right; transform-origin:center right; }
+
+	// Navigation
+	.navigation { position:absolute; left:0; bottom:0; width:1024px; height:100px; background:#fff url(img/navBg.png) no-repeat top center; background-size:814px 2px; text-align:center; z-index:9; }
+	.navigation a { display:inline-block; text-align:center; font-size:13px; color:#3e3b3c; vertical-align:top; }
+	.navigation a div { display:block; width:35px; height:35px; background:url(img/navSprite.png) no-repeat 0 0; background-size:315px 70px; margin:25px 35px 5px 35px;}
+		/* Normal State */
+		.navigation a.btnHome div { background-position:0 0; }
+		.navigation a.btnPI div { background-position:-35px 0; }
+		.navigation a.btnSmPC div { background-position:-70px 0; }
+		.navigation a.btnReferences div { background-position:-175px 0; }
+		.navigation a.btnStudyDesign div { background-position:-210px 0; }
+		.navigation a.btnVideo div { background-position:-280px 0; }
+		/* Selected State */
+		.navigation a.btnHome.selected div { background-position:0 0; } /* Homepage don't has hover */
+		.navigation a.btnPI.selected div { background-position:-35px -35px; }
+		.navigation a.btnSmPC.selected div { background-position:-70px -35px; }
+		.navigation a.btnReferences.selected div { background-position:-175px -35px; }
+		.navigation a.btnStudyDesign.selected div { background-position:-210px -35px; }
+		.navigation a.btnVideo.selected div { background-position:-280px -35px; }
+		/* Icon text */
+		.navigation a span { display:block; text-align:center; font-size:13px; }
+		.navigation a.selected span { color:#ec6607; }
+	
+		.navigation a.disabled { opacity:0.5; }
+		.navigation a.noContent { opacity:0.5; }
+
+
+	/* References Effects : ease, linear, ease-in, ease-out, ease-in-out, step-start, step-end, steps */
+	.references { position:absolute; top:0; left:-550px; width:412px; height:668px; background:#fad8c1; z-index:9; padding:50px; font-size:16px; color:#575756; 
+		-webkit-transition: all ease-in-out 0.3s; -moz-transition: all ease-in-out 0.3s; transition: all ease-in-out 0.3s;
+		-webkit-box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); -moz-box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); }
+	.references ol { margin:0; padding:0 0 0 15px; }
+	.references ol li { line-height: 22px; }
+	
+	/* Studydesign Effects : ease, linear, ease-in, ease-out, ease-in-out, step-start, step-end, steps */
+	.studydesign { position:absolute; top:0; left:-550px; width:412px; height:668px; background:#fad8c1; z-index:9; padding:50px; font-size:16px; color:#575756; 
+		-webkit-transition: all ease-in-out 0.3s; -moz-transition: all ease-in-out 0.3s; transition: all ease-in-out 0.3s;
+		-webkit-box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); -moz-box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); box-shadow: 6px 0px 23px -3px rgba(0,0,0,0.75); }
+	.studydesign ol { margin:0; padding:0 0 0 15px; }
+	.studydesign ol li { line-height: 22px; }
+
+	.closeSideInfo, .closeStudyDesign, .closeReference { position:absolute; right:20px; top:20px; }
+		.closeReference span, .closeStudyDesign span { display:none; position:absolute; width:500px; height:665px; background:#fff; top:-20px; right:-530px; opacity:0.01; } /* Hit Area */
+		.activated .closeReference span, .activated .closeStudyDesign span { display:block; }
+
+	.closeVideo { position:absolute; right:10px; top:10px; }
+
+	/* Popup */
+	.popup {
+		display:none; position:absolute; left:0; top:0; background:rgba(0, 0, 0, 0.7); width:100%; height:670px; z-index:9; -webkit-transform:scale(1,1); transform:scale(1,1); -webkit-transition: all ease 0.3s; transition: all ease 0.3s; -webkit-transform-origin:center right;  transform-origin:center right; 
+	}
+	.popupActive { display:block; }	
+		.closePopup { position:absolute; right:10px; top:10px; z-index:10; }
+		.popupContent { position:relative; width:961px; height:650px; margin:10px auto 0 auto; background:#fff; }
+
+	/* Page Flipper */
+	.flipPageContainer {  }
+	.flipper { position:relative; height:100%; 
+		/* Flip Effect */
+		-webkit-perspective:1000px; perspective:1000px; -webkit-transition:0.6s; transition: 0.6s; transform-style: preserve-3d; -webkit-transform-style:preserve-3d;
+		.frontPage, .backPage { position:absolute; top:0; left:0; height:100%; width:100%; backface-visibility:hidden; -webkit-backface-visibility:hidden; /* Hide Mirror */ }
+	}
+	.flipPageContainer .frontPage { z-index:10;-webkit-transform:rotateY(0deg);  transform:rotateY(0deg); /* Show First Page */ }
+	.flipPageContainer .backPage { transform:rotateY(180deg); -webkit-transform:rotateY(180deg); /* Hide Second Page */ }
+	.flipPageContainer .btnFlip { position:absolute; top:110px; right:10px; }
+	.flipEffect {  transform: rotateY(180deg); -webkit-transform:rotateY(180deg); /* Flip Effect */ }
+
+	/* Sliding Reference/Study Design  */
+	.shrinked { -webkit-transform: scale(0.4,0.4) translateX(-600px) translateY(0px); -webkit-transition: all ease-in-out 0.3s;  transform-origin:1340px center; -webkit-box-shadow:6px 6px 20px 5px rgba(0,0,0,0.25); -moz-box-shadow:6px 6px 20px 5px rgba(0,0,0,0.25); box-shadow: 6px 6px 20px 5px rgba(0,0,0,0.25); }
+	.activated { left:0; -webkit-transition: all ease-in-out 0.3s; -moz-transition: all ease-in-out 0.3s; transition: all ease-in-out 0.3s; }
+
+	/* Video popup */
+	.videoPopup { display:none; position:absolute; left:0; top:0; background:rgba(0, 0, 0, 0.7); width:100%; height:100%; z-index:9;  }
+		.videoContainer { position:relative; width:961px; height:650px; margin:10px auto 0 auto; background:#fff;  }
+
+
+
+/* Slide 1 */
+#slide1 {
+	.content { 
+		/* Need to set min height property for shrink effect works correctly */
+		min-height:668px;
+	}
+
+	/* Video Popup */
+	#videoPopup1 {
+		text-align:center;
+		#video1 { margin:100px auto 0 auto; }
+	}
+
+}
+
+/* Slide 2 */
+#slide2 {
+		/* Page content */
+		.content { min-height:668px; }
+
+		/* Popup 1 */
+		#popup1 { }
+
+		/* Popup 2 */
+		#popup2 {
+			/* Flip example */
+			.flipPageContainer .frontPage { width:100%; height:100%; background-color:#90d57d; }
+			.flipPageContainer .backPage { width:100%; height:100%; background-color:#4e84c6; }
+		}	
+}
+
+/* Hidden Presentation Slide1 */
+#HiddenPresentation_slide1 {
+
+
+	// Highlight Current Navigation
+	.navigation a:nth-child(2) { color:#d95119;  }
+	.navigation a.btnPI div { background-position:-35px -35px; }
+}
+
+
+/* Other Hidden Presentation, Slide 1 */
+#OtherHiddenPresentation_slide1 {
+
+
+	// Highlight Current Navigation
+	.navigation a:nth-child(3) { color:#d95119;  }
+	.navigation a.btnSmPC div { background-position:-70px -35px; }
+}
+

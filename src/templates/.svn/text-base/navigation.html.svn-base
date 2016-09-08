@@ -1,0 +1,8 @@
+<div class="navigation">
+	<a data-go="1" id="btnHome" class="btnHome"><div></div><span>Home</span></a> <!-- Link to slide -->
+	<a data-go="1,PI" id="btnPI" class="btnPI"><div></div><span>PI</span></a> <!-- Link to slide in hidden presentation -->
+	<a data-go="1,SmPC" id="btnSmPC" class="btnSmPC"><div></div><span>SmPC</span></a> <!-- Link to slide in hidden presentation -->
+	<a id="btnReferences" class="btnReferences info"><div></div><span>References</span></a> <!-- Reference link -->
+	<a id="btnStudyDesign" class="btnStudyDesign info"><div></div><span>Study Design</span></a> <!-- Study design link -->
+	<a id="btnVideo" class="btnVideo btnVideoPopup"><div></div><span>Video</span></a> <!-- Video popup link -->
+</div>

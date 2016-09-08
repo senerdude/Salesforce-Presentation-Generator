@@ -1,0 +1,35 @@
+{
+  "name": "VeevaSlideGenerator",
+  "version": "1.0.1",
+  "description": "Slide Generator for Veeva",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sener Koc - sener@lifetoweb.com",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "gm": "^1.22.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-exec": "^2.1.2",
+    "gulp-htmlclean": "^2.7.6",
+    "gulp-ignore": "^2.0.1",
+    "gulp-image-resize": "^0.8.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-lb-include": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.1",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^1.5.3",
+    "gulp-webserver": "^0.9.1",
+    "gulp-webshot": "^0.2.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
+  }
+}
