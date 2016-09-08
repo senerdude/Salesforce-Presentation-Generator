@@ -12,7 +12,8 @@ With this framework you can easily develope/generate presentations for Salesforc
 - Install NodeJS : https://nodejs.org/en/
 - Install PhantomJS : http://phantomjs.org/
 - Install Brew
-			Note : If your MAC OSX Version is Yosemite (10.10.5) then follow these instructions; https://danielmiessler.com/blog/installing-homebrew-yosemite/
+	
+	Note : If your MAC OSX Version is Yosemite (10.10.5) then follow these instructions; https://danielmiessler.com/blog/installing-homebrew-yosemite/
 
 	    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	    $ ruby doctor
