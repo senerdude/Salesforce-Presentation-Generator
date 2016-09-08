@@ -29,7 +29,7 @@ With this framework you can easily develope/generate presentations for Salesforc
 	    
 <h1>Configuration</h1>
 
-- Edit gulpfile.js properties
+Edit gulpfile.js properties
 
 	    * Edit Project Properties
 	    * Edit Hidden Presentations if exist or left as emty array.
